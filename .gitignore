@@ -1,0 +1,46 @@
+# Environment variables
+.env
+.env.*
+!backend/.env.example
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+
+# Node.js
+node_modules/
+dist/
+dist-ssr
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Database dumps (keep only migrations, schema, and seed files)
+*.dump
+backups/
+backend/*dump*.sql
+database/*dump*.sql
+# Allow migration SQL files
+!backend/migrations/*.sql
+!database/schema.sql
+!database/seed_sample.sql
+uploads/
+backend/uploads/*
+!backend/uploads/.gitkeep
+*.db
+openapi.json

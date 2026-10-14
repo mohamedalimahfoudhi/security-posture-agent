@@ -1,0 +1,104 @@
+Company Infrastructure Architecture
+
+Organization:
+Demo Customer
+
+====================================
+SERVERS
+====================================
+
+1. Web Server
+
+Technology:
+Apache HTTP Server
+
+Operating System:
+Ubuntu Linux
+
+Purpose:
+Hosts customer web applications.
+
+Criticality:
+HIGH
+
+Internet Exposure:
+YES
+
+
+2. Database Server
+
+Technology:
+PostgreSQL
+
+Operating System:
+Ubuntu Linux
+
+Purpose:
+Stores application and customer data.
+
+Criticality:
+CRITICAL
+
+Internet Exposure:
+NO
+
+Sensitive Data:
+YES
+
+
+====================================
+SECURITY INFRASTRUCTURE
+====================================
+
+3. SIEM Platform
+
+Technology:
+Wazuh
+
+Purpose:
+Security monitoring and threat detection.
+
+Criticality:
+HIGH
+
+
+4. Firewall
+
+Technology:
+OPNsense
+
+Purpose:
+Network security and traffic filtering.
+
+Criticality:
+HIGH
+
+
+====================================
+SOFTWARE INVENTORY
+====================================
+
+Apache
+PostgreSQL
+Ubuntu
+OpenSSL
+Wazuh
+OPNsense
+
+
+====================================
+BUSINESS CONTEXT
+====================================
+
+Critical assets:
+- Database systems
+- Customer applications
+
+Sensitive information:
+- Customer data
+- Business records
+
+Security requirements:
+- Patch critical vulnerabilities quickly
+- Monitor exploitation attempts
+- Generate alerts automatically

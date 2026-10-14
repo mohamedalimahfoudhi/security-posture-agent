@@ -1,0 +1,23 @@
+{
+  "assets": [
+    {
+      "name": "Web Server 01",
+      "type": "server",
+      "os": "Ubuntu 22.04",
+      "services": [
+        "Apache",
+        "Docker"
+      ],
+      "internet_exposed": true
+    },
+    {
+      "name": "Database Server",
+      "type": "database",
+      "os": "Windows Server 2022",
+      "services": [
+        "SQL Server"
+      ],
+      "internet_exposed": false
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+ALTER TABLE threat_articles
+ADD COLUMN IF NOT EXISTS summary TEXT,
+ADD COLUMN IF NOT EXISTS severity VARCHAR(50),
+ADD COLUMN IF NOT EXISTS vendors JSONB DEFAULT '[]'::JSONB,
+ADD COLUMN IF NOT EXISTS products JSONB DEFAULT '[]'::JSONB,
+ADD COLUMN IF NOT EXISTS cves JSONB DEFAULT '[]'::JSONB,
+ADD COLUMN IF NOT EXISTS malware JSONB DEFAULT '[]'::JSONB,
+ADD COLUMN IF NOT EXISTS threat_actors JSONB DEFAULT '[]'::JSONB,
+ADD COLUMN IF NOT EXISTS mitre_techniques JSONB DEFAULT '[]'::JSONB,
+ADD COLUMN IF NOT EXISTS attack_scenario TEXT,
+ADD COLUMN IF NOT EXISTS technical_impact TEXT,
+ADD COLUMN IF NOT EXISTS exploitation_context TEXT,
+ADD COLUMN IF NOT EXISTS affected_technologies JSONB DEFAULT '[]'::JSONB,
+ADD COLUMN IF NOT EXISTS customer_relevance TEXT,
+ADD COLUMN IF NOT EXISTS recommendation TEXT,
+ADD COLUMN IF NOT EXISTS confidence FLOAT,
+ADD COLUMN IF NOT EXISTS processed BOOLEAN DEFAULT false;
+
+CREATE INDEX IF NOT EXISTS idx_threat_articles_processed ON threat_articles (processed);
+CREATE INDEX IF NOT EXISTS idx_threat_articles_confidence ON threat_articles (confidence);

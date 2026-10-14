@@ -1,0 +1,54 @@
+[
+  {
+    "id": 4,
+    "customer": "Demo Customer",
+    "title": "HIGH relevance: PostgreSQL 14.2 affected by Critical PostgreSQL vulnerability allows unauthenticated remote code execution",
+    "event": null,
+    "risk_level": "HIGH",
+    "risk_score": 88,
+    "confidence_score": 83,
+    "status": "NEW",
+    "created_at": "2026-07-28T15:28:32.493500",
+    "updated_at": "2026-07-28T15:28:32.493500",
+    "escalation_recommendation": "ESCALATE_SOON"
+  },
+  {
+    "id": 3,
+    "customer": "Demo Customer",
+    "title": "React XSS Vulnerability",
+    "event": null,
+    "risk_level": "MEDIUM",
+    "risk_score": 65,
+    "confidence_score": 75,
+    "status": "NEW",
+    "created_at": "2026-07-28T14:33:27.460933",
+    "updated_at": "2026-07-29T01:45:35.222783",
+    "escalation_recommendation": "MONITOR"
+  },
+  {
+    "id": 2,
+    "customer": "Demo Customer",
+    "title": "WordPress SQL Injection",
+    "event": null,
+    "risk_level": "HIGH",
+    "risk_score": 85,
+    "confidence_score": 85,
+    "status": "NEW",
+    "created_at": "2026-07-28T14:33:27.460933",
+    "updated_at": "2026-07-29T01:45:35.222783",
+    "escalation_recommendation": "ESCALATE_SOON"
+  },
+  {
+    "id": 1,
+    "customer": "Demo Customer",
+    "title": "Apache Struts RCE Detected",
+    "event": null,
+    "risk_level": "CRITICAL",
+    "risk_score": 95,
+    "confidence_score": 90,
+    "status": "NEW",
+    "created_at": "2026-07-28T14:33:27.460933",
+    "updated_at": "2026-07-29T01:45:35.222783",
+    "escalation_recommendation": "ESCALATE_IMMEDIATELY"
+  }
+]

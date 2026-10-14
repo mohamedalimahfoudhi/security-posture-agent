@@ -1,0 +1,22 @@
+<svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circular mark -->
+  <circle cx="16" cy="16" r="14" fill="#2B3032"/>
+  
+  <!-- Shield motif with gradient -->
+  <defs>
+    <linearGradient id="logoGradient" x1="8" y1="8" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E39307"/>
+      <stop offset="0.5" stop-color="#E0781D"/>
+      <stop offset="1" stop-color="#C56C34"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Shield icon -->
+  <path d="M16 6 L24 10 V16 C24 21 20 25 16 27 C12 25 8 21 8 16 V10 L16 6 Z" fill="url(#logoGradient)"/>
+  
+  <!-- Security Posture Agent wordmark -->
+  <text x="38" y="20" font-family="Arial, sans-serif" font-weight="600" font-size="14" fill="#2B3032">Security Posture Agent</text>
+  
+  <!-- VERSION -->
+  <text x="38" y="28" font-family="Arial, sans-serif" font-weight="500" font-size="8" fill="#E67A2E" letter-spacing="1">v1.0</text>
+</svg>

@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --void: #14171a;
+    --panel: #1e2224;
+    --hairline: #2b3032;
+    --ink: #e8e9ed;
+    --mist: #8b93a1;
+    --ember-bright: #e39307;
+    --ember-mid: #e0781d;
+    --ember-deep: #c56c34;
+    --ember-flat: #e67a2e;
+    --sev-critical: #e2483c;
+    --sev-high: #d65a3c;
+    --sev-elevated: #d9b23d;
+    --sev-low: #4c8c63;
+  }
+
+  * {
+    @apply border-hairline;
+  }
+
+  body {
+    @apply bg-void text-ink font-body antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--void);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--hairline);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--mist);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-gradient-ember {
+    background: linear-gradient(135deg, var(--ember-bright), var(--ember-deep));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gradient-ember {
+    border-image: linear-gradient(135deg, var(--ember-bright), var(--ember-deep)) 1;
+  }
+
+  .bg-gradient-ember {
+    background: linear-gradient(135deg, var(--ember-bright), var(--ember-deep));
+  }
+
+  .focus-ring-ember {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember-bright focus-visible:ring-offset-2 focus-visible:ring-offset-void;
+  }
+
+  .font-display {
+    font-family: "IBM Plex Sans Condensed", "Segoe UI", system-ui, sans-serif;
+  }
+
+  .font-body {
+    font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  }
+
+  .font-data {
+    font-family: "IBM Plex Mono", "Consolas", monospace;
+  }
+}
+
+@keyframes edge-pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes feed-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-edge-pulse {
+  animation: edge-pulse 3s ease-in-out infinite;
+}
+
+.animate-feed-slide-in {
+  animation: feed-slide-in 200ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-edge-pulse,
+  .animate-feed-slide-in {
+    animation: none;
+  }
+}
